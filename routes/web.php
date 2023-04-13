@@ -28,4 +28,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// authフォルダにて、ゲストのルーティングとその際使用するコントローラーが記載されている
 require __DIR__.'/auth.php';

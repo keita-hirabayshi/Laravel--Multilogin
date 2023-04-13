@@ -7,7 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-
+// 検証プロンプト
 class EmailVerificationPromptController extends Controller
 {
     /**

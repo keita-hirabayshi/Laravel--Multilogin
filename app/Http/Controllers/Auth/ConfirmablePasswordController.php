@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use Illuminate\View\View;
-
+// パスワード確認
 class ConfirmablePasswordController extends Controller
 {
     /**
