@@ -4,3 +4,4 @@ sail artisan config:clear       環境ファイルをクリア
 sail artisan cache:clear       アプリ側のキャッシュをクリア
 sail compose にてcomposeメソッドは使用可能 (頭にsailをつければ、phpメソッドの代わりとなる事が多い)
 npm インストールによって、lalavel breezeにて必要なパッケージが追加でインストールされる
+n
