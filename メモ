@@ -4,3 +4,8 @@ sail artisan config:clear       環境ファイルをクリア
 sail artisan cache:clear       アプリ側のキャッシュをクリア
 sail compose にてcomposeメソッドは使用可能 (頭にsailをつければ、phpメソッドの代わりとなる事が多い)
 npm インストールによって、lalavel breezeにて必要なパッケージが追加でインストールされる
+
+CSS
+tailwind : bootstrapに代わるフレームワークで、bootstrapと比べ微調整などがしやすい・レスポンシブ対応など特徴を持つ
+
+モバイルファースト  実装にあたり携帯の画面サイズを基準にデザインを調整する考え方
