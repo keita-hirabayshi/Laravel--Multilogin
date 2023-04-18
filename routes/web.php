@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ComponentTestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,4 +30,8 @@ Route::middleware('auth')->group(function () {
 });
 
 // authフォルダにて、ゲストのルーティングとその際使用するコントローラーが記載されている
+
+Route::get('/component-test1', [ComponentTestController::class, 'showComponent1']);
+Route::get('/component-test2', [ComponentTestController::class, 'showComponent2']);
+
 require __DIR__.'/auth.php';
