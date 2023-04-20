@@ -18,3 +18,5 @@ tailのversion3のポイント
 Bladeコンポーネント
 コントローラーの代わりに、DBとデータのやり取りや変数の受け渡し等を行う(controllerは viewを返すのみで、負担を軽くする役割も担う)
 HTMLの要素1つ1つを部品として組み入れていくイメージ
+slot
+componentファイルにて複数のスロット(headerやslot)を使用している場合は、名前付きスロットにて指定する <x-slot name='header'>
