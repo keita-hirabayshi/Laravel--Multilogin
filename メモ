@@ -7,6 +7,28 @@ npm インストールによって、lalavel breezeにて必要なパッケー�
 
 CSS
 tailwind : bootstrapに代わるフレームワークで、bootstrapと比べ微調整などがしやすい・レスポンシブ対応など特徴を持つ
+tailwindは容量が多いことから、必要ない機能を削除するパーズという機能がある
+
+tailのversion3のポイント
+・Just-In-Time機能  必要なものを必要な時に必要なだけ出力する機能
+使用にあたってはターミナルを3画面起動すると見やすい
 
 モバイルファースト  実装にあたり携帯の画面サイズを基準にデザインを調整する考え方
-コンポーネント     ビューファイル内で複数回にわたり使用可能な、HTML要素。Laravelのlayouts(header,footerファイル)のようなもの
+
+Bladeコンポーネント
+コントローラーの代わりに、DBとデータのやり取りや変数の受け渡し等を行う(controllerは viewを返すのみで、負担を軽くする役割も担う)
+HTMLの要素1つ1つを部品として組み入れていくイメージ
+slot
+componentファイルにて複数のスロット(headerやslot)を使用している場合は、名前付きスロットにて指定する <x-slot name='header'>
+
+高速な開発環境を提供してくれる、コードを本番用に構築するフロントエンド側のビルドツール(最新はvite  旧はmix。Laravelではcssとjavasecriptの本番用のアセット構築)
+使い方
+フロント側   sail npm run devにてフロントサーバー側を構築する(viteはあくまでもフロント側のツール)
+バックエンド sail artisan serveにてバックエンドを起動(php側でも作業するので、こちらも必要)
+両方行うことで、正常に処理される
+
+クラスベースのコンポーネントの流れ
+<x-test-class-base />  にてコンポーネントクラス(app/view/component)が読み込まれ、そのなかのrenderメソッドに記載のbladeファイル(component)が呼び出される
+
+Alpine.jsとは
+tailwindのjavascript版のようなもの
