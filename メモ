@@ -20,3 +20,9 @@ Bladeコンポーネント
 HTMLの要素1つ1つを部品として組み入れていくイメージ
 slot
 componentファイルにて複数のスロット(headerやslot)を使用している場合は、名前付きスロットにて指定する <x-slot name='header'>
+
+高速な開発環境を提供してくれる、コードを本番用に構築するフロントエンド側のビルドツール(最新はvite  旧はmix。Laravelではcssとjavasecriptの本番用のアセット構築)
+使い方
+フロント側   sail npm run devにてフロントサーバー側を構築する(viteはあくまでもフロント側のツール)
+バックエンド sail artisan serveにてバックエンドを起動(php側でも作業するので、こちらも必要)
+両方行うことで、正常に処理される
