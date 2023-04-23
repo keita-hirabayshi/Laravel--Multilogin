@@ -26,3 +26,6 @@ componentファイルにて複数のスロット(headerやslot)を使用して�
 フロント側   sail npm run devにてフロントサーバー側を構築する(viteはあくまでもフロント側のツール)
 バックエンド sail artisan serveにてバックエンドを起動(php側でも作業するので、こちらも必要)
 両方行うことで、正常に処理される
+
+クラスベースのコンポーネントの流れ
+<x-test-class-base />  にてコンポーネントクラス(app/view/component)が読み込まれ、そのなかのrenderメソッドに記載のbladeファイル(component)が呼び出される
