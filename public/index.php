@@ -30,6 +30,7 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 | into the script here so we don't need to manually load our classes.
 |
 */
+// まず、indexファイルにリダイレクト後、autloadファイルが読み込まれる
 
 require __DIR__.'/../vendor/autoload.php';
 
@@ -44,6 +45,7 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
+// 2番目にサービスコンテナが下記のファイル内で生成される
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
 $kernel = $app->make(Kernel::class);
