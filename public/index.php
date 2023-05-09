@@ -48,10 +48,12 @@ require __DIR__.'/../vendor/autoload.php';
 // 2番目にサービスコンテナが下記のファイル内で生成される
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
+// サービスコンテナ登録したカーネルを変数に入れ込む
 $kernel = $app->make(Kernel::class);
-
+// カーネル内のメソッドにて、リクエストを設定している
 $response = $kernel->handle(
     $request = Request::capture()
 )->send();
 
+// terminateメソッドにて削除を実行
 $kernel->terminate($request, $response);

@@ -6,6 +6,14 @@ use Illuminate\Http\Request;
 
 class LifeCycleTestController extends Controller
 {
+    public function showServiceProviderTest(){
+    // encryptionサービスプロバイダーを変数内へ代入する
+        $encrypt = app()->make('encrypter');
+    // 中のメソッドにてパスワードを暗号化させる
+        $password = $encrypt->encrypt('password');
+    // 暗号化したパスワードはdecryptメソッドにて、元に戻される
+        dd($password,$encrypt->decrypt($password));
+    }
     public function showServiceContainerTest(){
     // ライフサイクルテストの設定方法(bindメソッドを用いる)
         app()->bind('lifeCycleTest',function(){
@@ -21,9 +29,10 @@ class LifeCycleTestController extends Controller
 
         // サービスコンテナapp()あり
         app()->bind('sample', Sample::class);
-        // $sample = app()->make('sample');
-        // $sample->run();
+        $sample = app()->make('sample');
+        $sample->run();
 
+        //  dd(app())にて中身を確認できる
         dd($test,app());
     }
 }
@@ -31,7 +40,7 @@ class LifeCycleTestController extends Controller
 class Sample
 {
     public $message;
-    public function __construct($message){
+    public function __construct(Message $message){
         $this->message = $message;
     }
     public function run(){

@@ -27,6 +27,7 @@ $app = new Illuminate\Foundation\Application(
 |
 */
 
+// 一度のみインスタンス化するということ
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
     App\Http\Kernel::class
