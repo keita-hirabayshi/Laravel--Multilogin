@@ -12,7 +12,10 @@ class LifeCycleTestController extends Controller
     // 中のメソッドにてパスワードを暗号化させる
         $password = $encrypt->encrypt('password');
     // 暗号化したパスワードはdecryptメソッドにて、元に戻される
-        dd($password,$encrypt->decrypt($password));
+
+        $sample = app()->make('serviceProviderTest');
+
+        dd($sample,$password,$encrypt->decrypt($password));
     }
     public function showServiceContainerTest(){
     // ライフサイクルテストの設定方法(bindメソッドを用いる)
