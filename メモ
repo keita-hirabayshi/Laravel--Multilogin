@@ -52,10 +52,26 @@ laravel読み込みの流れ
 config/app ファイル内に新規で作成した、プロバイダーを登録する   (これにより、自動でサービスコンテナに登録される)
 あとは、呼び出して使用可能
 
+
+
+
 アプリケーションの作成
 routeserviceproviderに使用したいパスを事前に登録する(今回はuserとownerとadmin)
-Laravelの認証機能(/config/auth)
+
+Laravelの認証機能の設定(/config/auth)
     Guard       リクエストごとにユーザー認証する方法を定義する
     プロバイダー   認証されたユーザー情報を取得する方法を定義する
-*ガードが実際に何をやっているのかは微妙
+    *ガードが実際に何をやっているのかは微妙
 
+Middlewareの設定
+    ログイン済みユーザーがアクセスしてきたらリダイレクト処理する    
+        guard設定対象であるか？また、認証されているか？ アクセスがあったurlが指定のurlか？ (ここでは、user,owner,admin)
+
+リクエストクラスの設定(HTTP/request/Auth/loginrequest)
+    登録済みのguardから、適切なパスワード・メール情報が送信されてきた場合のみ認証を許可する
+
+コントローラーなどの設定
+    user,owner,adminのそれぞれのコントローラーを作成する
+        controllerを修正する(authenticatedsession,confirmablepassword,)
+
+検索  command + F
