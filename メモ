@@ -74,4 +74,7 @@ Middlewareの設定
     user,owner,adminのそれぞれのコントローラーを作成する
         controllerを修正する(authenticatedsession,confirmablepassword,)
 
+ビューの追加
+    resources/views/users,admin,owners
+
 検索  command + F
