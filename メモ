@@ -78,3 +78,4 @@ Middlewareの設定
     resources/views/users,admin,owners
 
 検索  command + F
+エラー修正
