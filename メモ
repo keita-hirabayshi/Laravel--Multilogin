@@ -58,6 +58,8 @@ config/app ファイル内に新規で作成した、プロバイダーを登録
 アプリケーションの作成
 routeserviceproviderに使用したいパスを事前に登録する(今回はuserとownerとadmin)
 
+routeserviceproviderの設定(app/RouteServiceProvider)
+
 Laravelの認証機能の設定(/config/auth)
     Guard       リクエストごとにユーザー認証する方法を定義する
     プロバイダー   認証されたユーザー情報を取得する方法を定義する
@@ -78,4 +80,3 @@ Middlewareの設定
     resources/views/users,admin,owners
 
 検索  command + F
-エラー修正
