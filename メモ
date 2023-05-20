@@ -65,18 +65,24 @@ Laravelの認証機能の設定(/config/auth)
     プロバイダー   認証されたユーザー情報を取得する方法を定義する
     *ガードが実際に何をやっているのかは微妙
 
-Middlewareの設定
+Middlewareの設定(authenticated,redirectifauthenticated)
     ログイン済みユーザーがアクセスしてきたらリダイレクト処理する    
         guard設定対象であるか？また、認証されているか？ アクセスがあったurlが指定のurlか？ (ここでは、user,owner,admin)
 
 リクエストクラスの設定(HTTP/request/Auth/loginrequest)
     登録済みのguardから、適切なパスワード・メール情報が送信されてきた場合のみ認証を許可する
 
+    認証に関わる部分
+    config/auth
+
 コントローラーなどの設定
     user,owner,adminのそれぞれのコントローラーを作成する
-        controllerを修正する(authenticatedsession,confirmablepassword,)
+        controllerを修正する(上記のフォルダ内の全ファイル)
 
 ビューの追加
     resources/views/users,admin,owners
 
 検索  command + F
+
+; middleware(authenticate.php)
+aut
