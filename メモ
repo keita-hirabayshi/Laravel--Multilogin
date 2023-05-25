@@ -87,4 +87,4 @@ Middlewareの設定(authenticated,redirectifauthenticated)
 middleware(authenticate.php)
 
 ＊エラーが発生したが、原因の特定が困難だったため新規でプロジェクト「laravel-multi2」を作成
- 修正中　
+ 修正中　guard,
